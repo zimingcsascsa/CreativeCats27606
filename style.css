@@ -1,0 +1,173 @@
+body {
+  background: #111;
+  color: #fff;
+  font-family: 'Arial Black', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #2837CF;
+  color: #fff;
+  text-align: center;
+  padding: 2em 0 1em 0;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0 0 0.5em 0;
+  font-family: 'Arial Black', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 1em 0 0 0;
+}
+
+header nav a {
+  background: #2837CF;
+  color: #fff;
+  padding: 0.6em 1.4em;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 2px 2px 8px #222;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+}
+
+header nav a:hover, header nav a:focus {
+  background: #fff;
+  color: #2837CF;
+  box-shadow: 0 0 15px #2837CF;
+}
+
+h1, h2 {
+  font-size: 2em;
+  margin: 1em 0 0.5em 0;
+  color: #fff;
+}
+
+main {
+  padding: 1.5em 4vw 2em 4vw;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Section card containers and blue accent boxes */
+.plan-cards, .hex-goals {
+  display: flex;
+  gap: 1em;
+  margin: 1em 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card, .hex {
+  background: #2837CF;
+  color: #fff;
+  padding: 1em 0.8em;
+  text-align: center;
+  border-radius: 10px;
+  min-width: 140px;
+  font-size: 1em;
+  box-shadow: 2px 2px 8px #222;
+  margin: 0.2em 0;
+}
+
+/* Special highlight for central goal hexagon */
+.hex.highlight {
+  border: 2px solid #fff;
+}
+
+/* Hex shape for hex-goal grid (optional, for advanced styling) */
+.hex {
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  margin: 0.6em 0.3em;
+  min-width: 120px;
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tables (for finance, logs, outreach, robot components) */
+table {
+  width: 100%;
+  background: #222;
+  color: #fff;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 1em;
+}
+
+th, td {
+  border: 1px solid #2837CF;
+  padding: 0.6em;
+  text-align: left;
+  font-family: inherit;
+}
+
+th {
+  background: #2837CF;
+  color: #fff;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background: #191919;
+}
+
+/* Cat mascot silhouette or logo */
+.cat-silhouette {
+  width: 60px;
+  margin-top: 10px;
+  filter: brightness(2);
+  display: block;
+}
+
+/* Make lists and item bullets readable */
+ul {
+  margin-left: 1.4em;
+  margin-bottom: 1em;
+}
+
+li {
+  padding: 0.2em 0;
+}
+
+/* Responsive tweaks for mobile screens */
+@media (max-width: 750px) {
+  main {
+    padding: 1em 1vw 2em 1vw;
+  }
+
+  .plan-cards, .hex-goals {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7em;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+  h1, h2 {
+    font-size: 1.3em;
+  }
+}
+
+/* Optional: make buttons stand out in tables */
+table a, .card a, .hex a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
