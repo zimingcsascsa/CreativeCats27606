@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background: #4765ba;   /* Softer blue */
+  background: #4765ba;
   color: #ececec;
   text-align: center;
   padding: 2em 0 1em 0;
@@ -22,33 +22,34 @@ header h1 {
 
 header nav {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 18px;
+  justify-content: center;
   margin: 1em 0 0 0;
 }
 
 header nav a {
   background: #4765ba;
   color: #ececec;
-  padding: 0.5em 1.2em;
+  padding: 0.6em 1.2em;
   border-radius: 9px;
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
   border: none;
-  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
-  box-shadow: 1px 1px 6px #222;
-  letter-spacing: 0.4px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 2px 2px 8px #222;
+  letter-spacing: 0.5px;
   cursor: pointer;
   outline: none;
   display: inline-block;
 }
 
-header nav a:hover, header nav a:focus {
+header nav a:hover,
+header nav a:focus {
   background: #ececec;
   color: #4765ba;
-  box-shadow: 0 0 10px #4765ba;
+  box-shadow: 0 0 15px #4765ba;
 }
 
 h1, h2 {
@@ -63,45 +64,86 @@ main {
   margin: auto;
 }
 
-/* Section card containers and blue accent boxes */
-.plan-cards, .hex-goals {
+/* Hexagons Section - FOR GOALS */
+.hex-goals {
   display: flex;
-  gap: 1em;
-  margin: 1em 0;
-  justify-content: center;
   flex-wrap: wrap;
+  gap: 1.2em;
+  justify-content: center;
+  margin: 2em 0;
 }
 
-.card, .hex {
-  background: #4765ba;
-  color: #ececec;
-  padding: 0.9em 0.7em;
-  text-align: center;
-  border-radius: 10px;
-  min-width: 130px;
-  font-size: 0.96em;
-  box-shadow: 1px 1px 7px #292d33;
-  margin: 0.2em 0;
-  opacity: 0.94;
-}
-
-/* Special highlight for central goal hexagon */
-.hex.highlight {
-  border: 2px solid #ececec;
-}
-
-/* Hex shape for hex-goal grid (optional, for advanced styling) */
 .hex {
-  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
-  margin: 0.5em 0.24em;
-  min-width: 107px;
-  min-height: 86px;
+  background: linear-gradient(135deg, #4765ba 0%, #bdc8e6 75%);
+  color: #ececec;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  width: 150px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 16px;
+  box-shadow: 0 0 14px 1px #222, 0 2px 10px #0048ff;
+  margin: 0.4em 0.1em;
+  clip-path: polygon(
+    50% 0%,
+    93% 25%,
+    93% 75%,
+    50% 100%,
+    7% 75%,
+    7% 25%
+  );
+  letter-spacing: 0.1px;
+  opacity: 0.97;
+  transition: box-shadow 0.22s, transform 0.22s, background 0.22s;
 }
 
-/* Tables (for finance, logs, outreach, robot components) */
+
+.hex:hover {
+  box-shadow: 0 0 28px 5px #00e6ff, 0 2px 18px #0044ff;
+  background: linear-gradient(135deg, #1977e6 0%, #549dee 75%);
+  transform: scale(1.09);
+  z-index: 1;
+}
+
+.hex.highlight {
+  border: 4.5px solid #00b7ff;
+  background: linear-gradient(135deg, #00ccff 30%, #fff7ad 100%);
+  color: #222;
+  box-shadow: 0 0 18px 3px #008cff, 0 2px 14px #997a00;
+}
+
+@media (max-width: 750px) {
+  .hex-goals {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  .hex {
+    width: 96px;
+    height: 80px;
+    font-size: 0.93em;
+  }
+}
+
+/* Card Section - for highlights etc if you want to use class="card" */
+.card {
+  background: linear-gradient(115deg, #0044ff 55%, #00d4ff 100%);
+  color: #fff;
+  min-width: 240px;
+  max-width: 320px;
+  padding: 1.2em 1.5em;
+  border-radius: 14px;
+  margin: 1em;
+  box-shadow: 0 3px 18px #222;
+}
+.card h3 {
+  margin-top:0; margin-bottom:0.7em; color: #fff;
+}
+
+/* Tables */
 table {
   width: 100%;
   background: #22242a;
@@ -128,165 +170,43 @@ tr:nth-child(even) {
   background: #222430;
 }
 
-.cat-silhouette {
+/* Mascot */
+.cat-silhouette, img[alt="Team Cat Mascot"] {
   width: 52px;
   margin-top: 9px;
   filter: brightness(2.3);
   display: block;
+  border-radius: 18px;
+  box-shadow: 0 0 12px #222;
 }
 
-/* Make lists and item bullets readable */
+/* Lists/bullets readable */
 ul {
   margin-left: 1.2em;
   margin-bottom: 1em;
 }
-
 li {
   padding: 0.16em 0;
 }
-
-/* Responsive tweaks for mobile screens */
-@media (max-width: 750px) {
-  main {
-    padding: 0.76em 1vw 2em 1vw;
-  }
-
-  .plan-cards, .hex-goals {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.56em;
-  }
-
-  header h1 {
-    font-size: 1.16em;
-  }
-  h1, h2 {
-    font-size: 1.01em;
-  }
-}
-
-/* Optional: make buttons stand out in tables */
 table a, .card a, .hex a {
   color: #ececec;
   text-decoration: underline;
   font-weight: bold;
 }
-.hex-goals {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2em;
-  justify-content: center;
-  margin: 2em 0;
-}
 
-.hex {
-  background: #0044ff;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1em;
-  text-align: center;
-  width: 120px;
-  height: 104px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px #001141;
-  margin: 0.4em 0.1em;
-  /* Hex shape */
-  clip-path: polygon(
-    50% 0%,
-    93% 25%,
-    93% 75%,
-    50% 100%,
-    7% 75%,
-    7% 25%
-  );
-  transition: background 0.22s;
-}
-
-.hex:hover {
-  background: #276ef1;
-  color: #fff;
-}
-
-.hex.highlight {
-  border: 2.5px solid #fff;
-  background: #001141;
-  color: #00b4ff;
-}
-
+/* Responsive tweaks for mobile screens */
 @media (max-width: 750px) {
-  .hex-goals {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.9em;
+  main {
+    padding: 0.8em 1vw 2em 1vw;
   }
-  .hex {
-    width: 96px;
-    height: 80px;
-    font-size: 0.9em;
+  header h1, h1, h2 {
+    font-size: 1.16em;
   }
-}
-
-.hex-goals {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2em;
-  justify-content: center;
-  margin: 2em 0;
-}
-
-.hex {
-  background: linear-gradient(135deg, #003cff 0%, #00d4ff 100%);
-  color: #fff;
-  font-weight: bold;
-  font-size: 1em;
-  text-align: center;
-  width: 120px;
-  height: 104px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  box-shadow: 0 0 18px 3px #00b1ee, 0 2px 16px #001141;
-  margin: 0.4em 0.1em;
-  clip-path: polygon(
-    50% 0%,
-    93% 25%,
-    93% 75%,
-    50% 100%,
-    7% 75%,
-    7% 25%
-  );
-  transition:
-    transform 0.22s cubic-bezier(.22, .61, .36, 1),
-    box-shadow 0.23s;
-}
-
-.hex:hover {
-  transform: scale(1.10);
-  box-shadow: 0 0 32px 10px #00cbff, 0 2px 22px #001141;
-  background: linear-gradient(135deg, #005cff 0%, #19cfff 100%);
-  z-index: 2;
-}
-
-.hex.highlight {
-  border: 3.5px solid #fff;
-  background: linear-gradient(135deg, #ffe156 40%, #fff7ad 100%);
-  color: #222;
-  box-shadow: 0 0 20px 6px #ffe156, 0 2px 20px #997a00;
-}
-
-@media (max-width: 750px) {
-  .hex-goals {
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-  }
-  .hex {
-    width: 96px;
-    height: 80px;
-    font-size: 0.92em;
+  .card {
+    min-width:180px;
+    max-width:96vw;
+    font-size: 0.93em;
+    padding: 1em;
   }
 }
+
