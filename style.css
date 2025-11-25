@@ -1,9 +1,3 @@
-img.media-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 body {
   background: #181a20;
   color: #ececec;
@@ -77,6 +71,11 @@ main {
   gap: 1.2em;
   justify-content: center;
   margin: 2em 0;
+}
+img.media-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hex {
@@ -215,5 +214,4 @@ table a, .card a, .hex a {
     padding: 1em;
   }
 }
-
 
