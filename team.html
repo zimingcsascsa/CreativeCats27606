@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Members - Creative Cats FTC Robotics</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .member-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .member-card {
+      background: rgba(20, 20, 30, 0.8);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 168, 255, 0.3);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 113, 227, 0.2);
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+    .member-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 
+        0 8px 30px rgba(0, 168, 255, 0.4),
+        0 0 20px rgba(0, 168, 255, 0.2);
+      border-color: #00a8ff;
+    }
+    .member-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      background: rgba(0, 168, 255, 0.2);
+      border: 3px solid rgba(0, 168, 255, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00a8ff;
+      font-size: 48px;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0, 168, 255, 0.6);
+      box-shadow: 0 0 20px rgba(0, 168, 255, 0.3);
+      object-fit: cover;
+      background-size: cover;
+      background-position: center;
+    }
+    .member-photo img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .member-name {
+      font-size: 24px;
+      font-weight: 700;
+      color: #00a8ff;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px rgba(0, 168, 255, 0.5);
+    }
+    .member-role {
+      font-size: 16px;
+      color: #b0b0b0;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .member-bio {
+      font-size: 14px;
+      color: #d0d0d0;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">Creative Cats</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="robot.html">Robot</a>
+        <a href="goals.html">Goals</a>
+        <a href="logs.html">Logs</a>
+        <a href="media.html">Media</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="team-members">
+      <h2>Team Members</h2>
+      <p class="section-subtitle">Meet the talented individuals behind Creative Cats FTC 27606</p>
+      
+      <div class="member-grid">
+        <div class="member-card">
+          <div class="member-photo">
+            <!-- Replace with: <img src="tanvi.jpg" alt="Tanvi"> -->
+            T
+          </div>
+          <div class="member-name">Tanvi</div>
+          <div class="member-role">Captain, Outreach</div>
+          <div class="member-bio">Leading the team with dedication and passion for robotics and community engagement.</div>
+        </div>
+        
+        <div class="member-card">
+          <div class="member-photo">
+            <!-- Replace with: <img src="aish.jpg" alt="Aish"> -->
+            A
+          </div>
+          <div class="member-name">Aish</div>
+          <div class="member-role">Co-captain, CAD</div>
+          <div class="member-bio">Expert in computer-aided design and team coordination.</div>
+        </div>
+        
+        <div class="member-card">
+          <div class="member-photo">
+            <!-- Replace with: <img src="sachin.jpg" alt="Sachin"> -->
+            S
+          </div>
+          <div class="member-name">Sachin</div>
+          <div class="member-role">Social Media, YouTube, Instagram</div>
+          <div class="member-bio">Creative content creator documenting our journey and sharing knowledge.</div>
+        </div>
+        
+        <div class="member-card">
+          <div class="member-photo">
+            <!-- Replace with: <img src="ziming.jpg" alt="ZiMing"> -->
+            Z
+          </div>
+          <div class="member-name">ZiMing</div>
+          <div class="member-role">Lead Developer, Lead Programmer, Lead Builder</div>
+          <div class="member-bio">The driving force behind our robot design and development. Takes no breaks!</div>
+        </div>
+        
+        <div class="member-card">
+          <div class="member-photo">
+            <!-- Replace with: <img src="bodin.jpg" alt="Bodin"> -->
+            B
+          </div>
+          <div class="member-name">Bodin</div>
+          <div class="member-role">Build, Programming</div>
+          <div class="member-bio">Contributing to both hardware and software development.</div>
+        </div>
+        
+        <div class="member-card">
+          <div class="member-photo">
+            <!-- Replace with: <img src="isaac.jpg" alt="Isaac"> -->
+            I
+          </div>
+          <div class="member-name">Isaac</div>
+          <div class="member-role">Team Member</div>
+          <div class="member-bio">Active contributor to team goals and reflections.</div>
+        </div>
+        
+        <div class="member-card">
+          <div class="member-photo">
+            <!-- Replace with: <img src="oye.jpg" alt="Oye"> -->
+            O
+          </div>
+          <div class="member-name">Oye</div>
+          <div class="member-role">Team Member</div>
+          <div class="member-bio">Dedicated team member supporting various projects.</div>
+        </div>
+        
+        <div class="member-card">
+          <div class="member-photo">
+            <!-- Replace with: <img src="greeshmi.jpg" alt="Greeshmi"> -->
+            G
+          </div>
+          <div class="member-name">Greeshmi</div>
+          <div class="member-role">Driver</div>
+          <div class="member-bio">Our skilled driver, the messiah of robot control!</div>
+        </div>
+        
+        <div class="member-card">
+          <div class="member-photo">
+            <!-- Replace with: <img src="naveen.jpg" alt="Naveen"> -->
+            N
+          </div>
+          <div class="member-name">Naveen</div>
+          <div class="member-role">Mentor</div>
+          <div class="member-bio">Engineering mentor and "The CAD Guy" who invented the NUTBUSTER.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Creative Cats FTC 27606. All rights reserved.</p>
+    <p><a href="index.html">Back to top</a> | <a href="goals.html#contact">Contact Us</a></p>
+  </footer>
+</body>
+</html>
