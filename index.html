@@ -281,6 +281,14 @@
     const counterEls = document.querySelectorAll('[data-target]');
     let countersStarted = false;
 
+    function startCounters() {
+      if (countersStarted) return;
+      countersStarted = true;
+      setTimeout(() => {
+        counterEls.forEach(el => animateCounter(el));
+      }, 400);
+    }
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -289,14 +297,28 @@
       });
       if (!countersStarted) {
         const statsVisible = document.querySelector('.stats-bar.visible');
-        if (statsVisible) {
-          countersStarted = true;
-          counterEls.forEach(el => animateCounter(el));
-        }
+        if (statsVisible) startCounters();
       }
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
 
     revealEls.forEach(el => observer.observe(el));
+
+    // Fallback: if stats bar is already visible on load, start counters
+    window.addEventListener('load', () => {
+      revealEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('visible');
+        }
+      });
+      const statsBar = document.querySelector('.stats-bar');
+      if (statsBar) {
+        const rect = statsBar.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          startCounters();
+        }
+      }
+    });
   </script>
 </body>
 </html>
