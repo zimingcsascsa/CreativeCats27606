@@ -5,7 +5,6 @@
   <title>Creative Cats FTC Robotics - Home</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* ===== Particle Canvas ===== */
     #particles {
       position: fixed;
       top: 0; left: 0;
@@ -13,8 +12,6 @@
       z-index: 0;
       pointer-events: none;
     }
-
-    /* ===== Stat Counters ===== */
     .stats-bar {
       display: flex;
       justify-content: center;
@@ -76,17 +73,6 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
     }
-
-    /* ===== Scroll Reveal ===== */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
   </style>
 </head>
 <body>
@@ -107,7 +93,6 @@
 
   <canvas id="particles"></canvas>
   <main>
-    <!-- Home Section -->
     <section id="home" class="hero-section">
       <h1>Creative Cats Robotics</h1>
       <h2>FTC Team 27606</h2>
@@ -115,41 +100,39 @@
       <a href="goals.html#contact" class="cta-button">Contact Us</a>
     </section>
 
-    <!-- Stats Bar -->
     <div class="stats-bar">
       <div class="stat-item reveal">
-        <div class="stat-icon"></div>
-        <div class="stat-number"><span data-target="100">175</span><span class="plus">+</span></div>
+        <div class="stat-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00a8ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v3"/><path d="M12 12v.01"/></svg></div>
+        <div class="stat-number"><span data-target="100">0</span><span class="plus">+</span></div>
         <div class="stat-label">Hours on Robot</div>
       </div>
       <div class="stat-item reveal">
-        <div class="stat-icon"></div>
-        <div class="stat-number"><span data-target="130">75</span><span class="plus">+</span></div>
+        <div class="stat-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00a8ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div class="stat-number"><span data-target="130">0</span><span class="plus">+</span></div>
         <div class="stat-label">Outreach Hours</div>
       </div>
       <div class="stat-item reveal">
-        <div class="stat-icon"></div>
-        <div class="stat-number"><span data-target="12">12</span></div>
+        <div class="stat-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00a8ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="stat-number"><span data-target="12">0</span></div>
         <div class="stat-label">Team Members</div>
       </div>
     </div>
 
-    <!-- Recent Achievements Section -->
     <section id="achievements" class="achievements-section reveal">
       <h2>Recent Achievements</h2>
       <p class="section-subtitle">Celebrating innovation, teamwork, and success.</p>
       <div class="achievements-grid">
-        <div class="achievement-card">
+        <div class="achievement-card reveal">
           <div class="achievement-title">LM3 Competition</div>
           <div class="achievement-subtitle">9-Ball Autonomous</div>
           <p>Successfully implemented a consistent 9-ball autonomous routine with high accuracy scoring.</p>
         </div>
-        <div class="achievement-card">
+        <div class="achievement-card reveal">
           <div class="achievement-title">Robot Design</div>
           <div class="achievement-subtitle">Modular & Reliable</div>
           <p>Built a fully modular robot with 3-ball intake system, designed for easy serviceability.</p>
         </div>
-        <div class="achievement-card">
+        <div class="achievement-card reveal">
           <div class="achievement-title">Outreach Impact</div>
           <div class="achievement-subtitle">Community Engagement</div>
           <p>Active in workshops, tutorials, and mentoring to inspire the next generation of STEM students.</p>
@@ -157,7 +140,6 @@
       </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about-section reveal">
       <h2>About Us</h2>
       <p>We're high school students developing robots, documenting our work, and promoting STEM through outreach and competition.</p>
@@ -179,7 +161,7 @@
   </footer>
 
   <script>
-    // ===== Particle Background =====
+    // Particle Background
     const canvas = document.getElementById('particles');
     const ctx = canvas.getContext('2d');
     let mouse = { x: null, y: null };
@@ -197,9 +179,7 @@
     });
 
     class Particle {
-      constructor() {
-        this.reset();
-      }
+      constructor() { this.reset(); }
       reset() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -217,10 +197,7 @@
           const dx = mouse.x - this.x;
           const dy = mouse.y - this.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 150) {
-            this.x += dx * 0.002;
-            this.y += dy * 0.002;
-          }
+          if (dist < 150) { this.x += dx * 0.002; this.y += dy * 0.002; }
         }
       }
       draw() {
@@ -260,7 +237,7 @@
     }
     animateParticles();
 
-    // ===== Animated Counters =====
+    // Animated Counters
     function animateCounter(el) {
       const target = parseInt(el.dataset.target, 10);
       const duration = 2000;
@@ -276,49 +253,32 @@
       requestAnimationFrame(tick);
     }
 
-    // ===== Scroll Reveal + Counter Trigger =====
-    const revealEls = document.querySelectorAll('.reveal');
-    const counterEls = document.querySelectorAll('[data-target]');
     let countersStarted = false;
-
     function startCounters() {
       if (countersStarted) return;
       countersStarted = true;
       setTimeout(() => {
-        counterEls.forEach(el => animateCounter(el));
+        document.querySelectorAll('[data-target]').forEach(el => animateCounter(el));
       }, 400);
     }
 
-    const observer = new IntersectionObserver((entries) => {
+    // Trigger counters when stats bar enters viewport
+    const statsBar = document.querySelector('.stats-bar');
+    const statsObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) startCounters();
       });
-      if (!countersStarted) {
-        const statsVisible = document.querySelector('.stats-bar.visible');
-        if (statsVisible) startCounters();
-      }
     }, { threshold: 0.1 });
+    if (statsBar) statsObserver.observe(statsBar);
 
-    revealEls.forEach(el => observer.observe(el));
-
-    // Fallback: if stats bar is already visible on load, start counters
+    // Fallback: if already visible on load
     window.addEventListener('load', () => {
-      revealEls.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          el.classList.add('visible');
-        }
-      });
-      const statsBar = document.querySelector('.stats-bar');
       if (statsBar) {
         const rect = statsBar.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          startCounters();
-        }
+        if (rect.top < window.innerHeight && rect.bottom > 0) startCounters();
       }
     });
   </script>
+  <script src="reveal.js"></script>
 </body>
 </html>
