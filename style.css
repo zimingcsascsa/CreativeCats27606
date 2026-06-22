@@ -9,6 +9,27 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 168, 255, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 168, 255, 0.5);
+}
+
+/* Text Selection */
+::selection {
+  background: rgba(0, 168, 255, 0.3);
+  color: #ffffff;
+}
+
 body {
   background: #0a0a0f;
   color: #e0e0e0;
@@ -66,6 +87,8 @@ header {
   color: #00a8ff;
   letter-spacing: -0.5px;
   text-shadow: 0 0 10px rgba(0, 168, 255, 0.5), 0 0 20px rgba(0, 168, 255, 0.3);
+  cursor: default;
+  user-select: none;
 }
 
 header nav {
@@ -195,11 +218,16 @@ section {
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow: 
     0 0 30px rgba(0, 168, 255, 0.8),
-    0 6px 20px rgba(0, 113, 227, 0.5);
+    0 6px 20px rgba(0, 113, 227, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
   background: linear-gradient(135deg, #00a8ff 0%, #0071e3 100%);
+}
+
+.cta-button:active {
+  transform: translateY(-1px);
 }
 
 /* Achievements Section */
@@ -627,15 +655,18 @@ footer {
   background: rgba(5, 5, 10, 0.95);
   color: #b0b0b0;
   text-align: center;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   margin-top: 4rem;
   border-top: 1px solid rgba(0, 168, 255, 0.2);
   box-shadow: 0 -4px 20px rgba(0, 113, 227, 0.2);
+  position: relative;
+  z-index: 1;
 }
 
 footer p {
   margin: 0.5rem 0;
-  color: #b0b0b0;
+  color: #8ab4d6;
+  font-size: 15px;
 }
 
 footer a {

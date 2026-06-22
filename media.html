@@ -2,8 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Robot Design - Creative Cats FTC Robotics</title>
+  <title>Media - Creative Cats FTC Robotics</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .media-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .media-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 168, 255, 0.3);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 113, 227, 0.2);
+    }
+    .media-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 30px rgba(0, 168, 255, 0.4), 0 0 20px rgba(0, 168, 255, 0.2);
+      border-color: #00a8ff;
+    }
+    .media-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .media-item:hover img {
+      transform: scale(1.05);
+    }
+    .media-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0; right: 0;
+      padding: 1rem;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -20,114 +59,48 @@
       </nav>
     </div>
   </header>
-
   <main>
-    <!-- Robot Design Section -->
-    <section id="robot">
-      <h2>Robot Design</h2>
-      <p style="color: #00a8ff; font-size: 17px; margin-bottom: 2em; text-shadow: 0 0 8px rgba(0, 168, 255, 0.5);">Designed by Ziming</p>
-
-      <h3>Mistakes and Lessons Learned</h3>
-      <p>With Creative Cats meeting only once a week and not all members being able to attend every session, we faced tight timelines that delayed full completion of our intake mechanism by LM3 despite solid prototypes in LM2. This delayed coding and intake practice sessions, as both depended on a finished intake mechanism.</p>
-
-      <h3>Robot Overview</h3>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin: 2em 0;">
-        <img src="Benny2.jpg" class="media-center" alt="Robot Design" style="width:100%; max-width:400px; border-radius:12px;">
-        <img src="Benny3.jpg" class="media-center" alt="Robot Design" style="width:100%; max-width:400px; border-radius:12px;">
-        <img src="Benny4.jpg" class="media-center" alt="Robot Design" style="width:100%; max-width:400px; border-radius:12px;">
-        <img src="Benny5.jpg" class="media-center" alt="Robot Design" style="width:100%; max-width:400px; border-radius:12px;">
-        <img src="Benny6.jpg" class="media-center" alt="Robot Design" style="width:100%; max-width:400px; border-radius:12px;">
-        <img src="Benny1.jpg" class="media-center" alt="Robot Design" style="width:100%; max-width:400px; border-radius:12px;">
-      </div>
-
-      <h3>Modularity</h3>
-      <p>We design every major subsystem as a module so we can remove four to eight screws and swap or repair that system without touching the rest of the robot.</p>
-      <div class="plan-cards" style="margin: 1.5em 0;">
-        <div class="card">
-          <strong>V1</strong>
-          <ul>
-            <li>Used Duo's standard channel rails</li>
-            <li>Mounted intake and launcher separately</li>
-            <li>Allowed for quick removal during early tests</li>
-          </ul>
+    <section>
+      <h2>Media Gallery</h2>
+      <p class="section-subtitle">Photos and videos from our season.</p>
+      <div class="media-gallery">
+        <div class="media-item">
+          <img src="robot1.png" alt="Robot Design">
+          <div class="media-caption">Robot V1 — Drive Train</div>
         </div>
-        <div class="card">
-          <strong>V2</strong>
-          <ul>
-            <li>Allowed motors, ramps, and tubes to be dismantled</li>
-            <li>Enhanced modularity for easier repairs</li>
-          </ul>
+        <div class="media-item">
+          <img src="robot2.png" alt="Robot Design">
+          <div class="media-caption">Robot V1 — Launcher</div>
         </div>
-      </div>
-
-      <h3>Reliability and Low-Maintenance</h3>
-      <p>We built Creative Cats' robot on REV's proven DUO FTC Starter Bot platform, using its robust channel drivetrain, double-supported shafts, and reliable intake.</p>
-      <div class="plan-cards" style="margin: 1.5em 0;">
-        <div class="card">
-          <strong>V1</strong>
-          <ul>
-            <li>Survived over 20 matches with no breakage</li>
-            <li>Very minimal repair work/maintenance</li>
-            <li>Allowed improvement instead of rebuilding</li>
-          </ul>
+        <div class="media-item">
+          <img src="robot3.png" alt="Robot Design">
+          <div class="media-caption">Robot V1 — Full Build</div>
         </div>
-        <div class="card">
-          <strong>V2</strong>
-          <ul>
-            <li>Built to last 200 rounds</li>
-            <li>Included walls and better balance</li>
-            <li>Enhanced durability and stability</li>
-          </ul>
+        <div class="media-item">
+          <img src="robot4.png" alt="Robot Design">
+          <div class="media-caption">Robot V2 — Intake System</div>
+        </div>
+        <div class="media-item">
+          <img src="robot6.png" alt="Robot Design">
+          <div class="media-caption">Robot V2 — Side View</div>
+        </div>
+        <div class="media-item">
+          <img src="robot7.png" alt="Robot Design">
+          <div class="media-caption">Robot V2 — Detail</div>
+        </div>
+        <div class="media-item">
+          <img src="robot8.png" alt="Robot Design">
+          <div class="media-caption">Robot V2 — Electronics</div>
+        </div>
+        <div class="media-item">
+          <img src="robot9.png" alt="Robot Design">
+          <div class="media-caption">Robot V2 — Complete</div>
+        </div>
+        <div class="media-item">
+          <img src="mascot.jpeg" alt="Team Mascot">
+          <div class="media-caption">🐱 Our Mascot</div>
         </div>
       </div>
-
-      <h3>Driver-Centered Design</h3>
-      <p>All scoring actions are mapped to single buttons rather than combos, so the driver can focus on lining up rather than remembering sequences. Everything is tuned for the driver's ease of use.</p>
-      <div class="plan-cards" style="margin: 1.5em 0;">
-        <div class="card">
-          <strong>V1</strong>
-          <ul>
-            <li>Clear sight lines and intuitive controls</li>
-            <li>Drivers can score under pressure without frustration</li>
-          </ul>
-        </div>
-        <div class="card">
-          <strong>V2</strong>
-          <ul>
-            <li>Planned everything around how our driver operates</li>
-            <li>Simple controls for focus on scoring and field awareness</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>Clean Serviceability</h3>
-      <p>We prioritize serviceability because we can swap motors or fix issues fast in the pit. Easy access lets us fix issues in minutes during comps, keeping us competitive even after damage.</p>
-      <div class="plan-cards" style="margin: 1.5em 0;">
-        <div class="card">
-          <strong>V1</strong>
-          <ul>
-            <li>Emphasizes accessible wiring</li>
-            <li>Centered battery placement</li>
-            <li>Modular channels</li>
-          </ul>
-        </div>
-        <div class="card">
-          <strong>V2</strong>
-          <ul>
-            <li>Implements reliability and easy repair</li>
-            <li>Enhanced serviceability features</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>Initial Design: REV Starter Bot</h3>
-      <p>Our first robot design, which we used for LM1, was the REV Starter Bot. This bot used a plastic ramp to hold multiple artifacts, as well as a flywheel to launch them into the bin. While this design was a great starting point, there were definitely some flaws that we were looking to improve. Specifically, we wanted to improve the accuracy of our shooting and the efficiency of our robot.</p>
-
-      <h3>Software Improvements</h3>
-      <p>We made drastic software changes including a fully working 3-ball autonomous routine, plus tweaks to motor power levels and servo directional control for more precise artifact handling and scoring. These updates transformed our LM3 robot's performance, giving us a higher average score per round.</p>
-
-      <h3>Final Robot Features</h3>
-      <p>Our final robot features a fully functioning 3-ball intake powered by our chain-link conveyor system for reliable multi-artifact pickup. It also runs a consistent 9-ball autonomous routine that navigates, shoots, and scores with high accuracy. This drastically improved our bot's capabilities and raised our average score considerably.</p>
     </section>
   </main>
   <footer>

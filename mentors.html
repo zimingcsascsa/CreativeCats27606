@@ -2,38 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mentors</title>
+  <title>Mentors - Creative Cats FTC Robotics</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .mentor-card {
+      background: rgba(20, 20, 30, 0.8);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 168, 255, 0.3);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 113, 227, 0.2);
+      margin-bottom: 1.5rem;
+    }
+    .mentor-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0, 168, 255, 0.4), 0 0 20px rgba(0, 168, 255, 0.2);
+      border-color: #00a8ff;
+    }
+    .mentor-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: #00a8ff;
+      text-shadow: 0 0 10px rgba(0, 168, 255, 0.5);
+    }
+    .mentor-role {
+      color: #b0b0b0;
+      font-size: 16px;
+      margin: 0.3em 0 0.8em;
+    }
+    .mentor-quote {
+      font-style: italic;
+      color: #00d4ff;
+      padding: 0.8em 1.2em;
+      background: rgba(0, 168, 255, 0.08);
+      border-left: 3px solid rgba(0, 168, 255, 0.5);
+      border-radius: 0 8px 8px 0;
+      margin-top: 0.8em;
+    }
+  </style>
 </head>
 <body>
   <header>
-        <div style="background: #001141; color: #0044ff; text-align: center; font-size: 1.3em; font-weight: bold; padding: 0.7em 0; letter-spacing: 3px; margin-bottom: 1.2em; border-radius: 20px;">
-  FTC Creative Cats 27606
-    <h1>Mentors</h1>
+    <div class="header-container">
+      <div class="logo">Creative Cats</div>
       <nav>
-      <a href="teamstructure.html">Team Structure</a>
-      <a href="goals.html">Goals & Reflections</a>
-      <a href="plan.html">Team Plan</a>
-      <a href="mentors.html">Mentors</a>
-      <a href="robot.html">Robot Design</a>
-      <a href="outreach.html">Outreach</a>
-      <a href="logs.html">Meeting Logs</a>
-      <a href="media.html">Media</a>
-      <a href="teamtracker.html">TeamTracker</a>
-      <a href="index.html">Home</a>      
-
-    </nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="robot.html">Robot</a>
+        <a href="goals.html">Goals</a>
+        <a href="logs.html">Logs</a>
+        <a href="media.html">Media</a>
+      </nav>
+    </div>
   </header>
   <main>
     <section>
-      <h2>Our Guides</h2>
-      <ul>
-        <li>Senor Naveen – Engineering mentor, "The CAD Guy" Invented the NUTBUSTER  <br> Quote: <br><b>Remeber: righty tidy lefty loosey -Naveen, 2025</b></li>
-        <li>Mrs. Beckwith (Monica) – Outreach coordinator, Lead of coding, Manager, Bodin's Mom<br> Quote:<br><b>Rookies today Champions Tommorow - Monica, 2025</b></li>
-        <li>Mr. Beckwith (Ben)– Strategy Department, Lead of Enginnering, Bodin's Dad<br>Quote:<br><b>We need to take out the Enemy Team - Ben 2025</b></li>
-      </ul>
-      <p>Mentors help but let students lead, making every voice heard and encouraging innovation.</p>
+      <h2>Our Mentors</h2>
+      <p class="section-subtitle">Guiding us every step of the way.</p>
+
+      <div class="mentor-card">
+        <div class="mentor-name">Señor Naveen</div>
+        <div class="mentor-role">Engineering Mentor · "The CAD Guy" · Inventor of the NUTBUSTER</div>
+        <div class="mentor-quote">"Remember: righty tighty lefty loosey" — Naveen, 2025</div>
+      </div>
+
+      <div class="mentor-card">
+        <div class="mentor-name">Mrs. Beckwith (Monica)</div>
+        <div class="mentor-role">Outreach Coordinator · Lead of Coding · Manager · Bodin's Mom</div>
+        <div class="mentor-quote">"Rookies today, Champions tomorrow" — Monica, 2025</div>
+      </div>
+
+      <div class="mentor-card">
+        <div class="mentor-name">Mr. Beckwith (Ben)</div>
+        <div class="mentor-role">Strategy Department · Lead of Engineering · Bodin's Dad</div>
+        <div class="mentor-quote">"We need to take out the Enemy Team" — Ben, 2025</div>
+      </div>
+
+      <p style="margin-top: 2rem;">Mentors help but let students lead, making every voice heard and encouraging innovation.</p>
     </section>
   </main>
+  <footer>
+    <p>&copy; 2025 Creative Cats FTC 27606. All rights reserved.</p>
+    <p><a href="index.html">Back to top</a> | <a href="goals.html#contact">Contact Us</a></p>
+  </footer>
 </body>
 </html>
