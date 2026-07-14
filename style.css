@@ -37,7 +37,7 @@ body::after {
   pointer-events: none;
   z-index: 9999;
   opacity: 0.025;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' fill='%23fff' filter='url(%23n)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 180px;
 }
@@ -64,6 +64,11 @@ header {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.3s ease;
+}
+
+header.scroll-hidden {
+  transform: translateY(-100%);
 }
 
 .header-container {
@@ -253,6 +258,7 @@ section {
   transition: all 0.25s;
   cursor: pointer;
   border: none;
+  margin-top: auto;
 }
 
 .btn-primary {
@@ -295,6 +301,11 @@ section {
 .stat-item {
   text-align: center;
   min-width: 140px;
+  transition: transform 0.3s;
+}
+
+.stat-item:hover {
+  transform: scale(1.05);
 }
 
 .stat-number {
@@ -498,7 +509,7 @@ section {
 }
 
 /* ============================================================
-   Team Members
+   Team Members & School Badges
    ============================================================ */
 .member-grid {
   display: grid;
@@ -513,6 +524,7 @@ section {
   padding: 1.75rem 1.25rem;
   text-align: center;
   transition: border-color 0.3s, transform 0.3s;
+  display: grid;
 }
 
 .member-card:hover {
@@ -550,6 +562,20 @@ section {
   margin-bottom: 0.25rem;
 }
 
+.school-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: rgba(80, 160, 255, 0.15);
+  color: #50a0ff;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
 .member-role {
   font-size: 0.8rem;
   color: #50a0ff;
@@ -563,6 +589,37 @@ section {
   font-size: 0.85rem;
   color: #777;
   line-height: 1.5;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #888;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.filter-btn:hover {
+  border-color: rgba(80, 160, 255, 0.3);
+}
+
+.filter-btn.active {
+  background: #50a0ff;
+  color: #fff;
+  border-color: #50a0ff;
 }
 
 /* Season divider */
@@ -592,6 +649,101 @@ section {
 .robot-gallery img:hover {
   transform: scale(1.02);
   border-color: rgba(80, 160, 255, 0.25);
+}
+
+/* ============================================================
+   Image Modal
+   ============================================================ */
+.image-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9000;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-modal.open {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+}
+
+#modalImage {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.modal-close:hover {
+  transform: scale(1.2);
+}
+
+.modal-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.modal-prev, .modal-next {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-prev:hover, .modal-next:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================================
+   Scroll-to-Top Button
+   ============================================================ */
+.scroll-top-btn {
+  position: fixed;
+  bottom: -60px;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #50a0ff;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: bottom 0.3s, box-shadow 0.3s;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-top-btn.visible {
+  bottom: 2rem;
+}
+
+.scroll-top-btn:hover {
+  box-shadow: 0 4px 12px rgba(80, 160, 255, 0.4);
 }
 
 /* ============================================================
@@ -630,6 +782,49 @@ section {
   border-left: 3px solid rgba(80, 160, 255, 0.3);
   border-radius: 0 6px 6px 0;
   font-size: 0.95rem;
+}
+
+/* ============================================================
+   Tabs
+   ============================================================ */
+.tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: #666;
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tab-btn:hover {
+  color: #aaa;
+}
+
+.tab-btn.active {
+  color: #50a0ff;
+  border-bottom-color: #50a0ff;
+}
+
+.tab-panel {
+  display: none;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.tab-panel.active {
+  display: block;
 }
 
 /* ============================================================
@@ -938,6 +1133,7 @@ li::before {
   gap: 0.75rem;
   justify-content: center;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .social-links a {
@@ -976,6 +1172,8 @@ li::before {
   transition: border-color 0.3s, transform 0.3s;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .tier-card:hover {
@@ -998,38 +1196,48 @@ li::before {
 }
 
 .tier-card .tier-price span {
-  font-size: 0.5em;
-  font-weight: 400;
-  color: #666;
+  font-size: 0.6em;
+  opacity: 0.7;
+}
+
+.tier-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  background: rgba(80, 160, 255, 0.2);
+  color: #50a0ff;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  white-space: nowrap;
+  align-self: flex-start;
 }
 
 .tier-card ul {
-  margin-bottom: 1.5rem;
+  margin: 1rem 0;
+  flex-grow: 1;
 }
 
 .tier-card li {
-  font-size: 0.9rem;
   color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.tier-card .btn {
+  align-self: stretch;
+  text-align: center;
 }
 
 .tier-card.featured {
   border-color: rgba(80, 160, 255, 0.3);
-  background: rgba(80, 160, 255, 0.04);
+  background: rgba(80, 160, 255, 0.03);
 }
 
-.tier-card.featured::before {
-  content: 'Most Popular';
-  position: absolute;
-  top: 12px;
-  right: -28px;
-  background: #50a0ff;
-  color: #fff;
-  font-size: 0.7rem;
-  font-weight: 700;
-  padding: 0.3rem 2rem;
-  transform: rotate(45deg);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.tier-card.featured .tier-badge {
+  background: rgba(80, 160, 255, 0.3);
 }
 
 /* ============================================================
@@ -1037,49 +1245,43 @@ li::before {
    ============================================================ */
 .sponsor-logos {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
 }
 
 .sponsor-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem 2rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
-  min-width: 160px;
-  min-height: 80px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #888;
-  transition: border-color 0.3s;
+  filter: brightness(0.9);
+  transition: filter 0.3s;
 }
 
 .sponsor-logo:hover {
-  border-color: rgba(80, 160, 255, 0.15);
+  filter: brightness(1.1);
+}
+
+/* ============================================================
+   Multi-School Highlight
+   ============================================================ */
+.multi-school-highlight {
+  margin: 1.5rem 0;
 }
 
 /* ============================================================
    Footer
    ============================================================ */
 footer {
-  text-align: center;
-  padding: 2.5rem 2rem;
-  margin-top: 3rem;
+  background: rgba(17, 17, 19, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  position: relative;
-  z-index: 1;
+  padding: 2rem;
+  text-align: center;
+  color: #555;
+  font-size: 0.85rem;
 }
 
 footer p {
-  color: #555;
-  font-size: 0.8rem;
-  margin: 0.3rem 0;
+  margin-bottom: 0.5rem;
 }
 
 footer a {
@@ -1093,66 +1295,27 @@ footer a:hover {
 }
 
 /* ============================================================
-   Scroll Reveal
+   Reveal Animation
    ============================================================ */
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+.reveal-stagger > * {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Stagger children */
-.reveal-stagger > .reveal:nth-child(1) { transition-delay: 0s; }
-.reveal-stagger > .reveal:nth-child(2) { transition-delay: 0.08s; }
-.reveal-stagger > .reveal:nth-child(3) { transition-delay: 0.16s; }
-.reveal-stagger > .reveal:nth-child(4) { transition-delay: 0.24s; }
-.reveal-stagger > .reveal:nth-child(5) { transition-delay: 0.32s; }
-.reveal-stagger > .reveal:nth-child(6) { transition-delay: 0.4s; }
+.reveal-stagger > :nth-child(1) { animation-delay: 0.1s; }
+.reveal-stagger > :nth-child(2) { animation-delay: 0.2s; }
+.reveal-stagger > :nth-child(3) { animation-delay: 0.3s; }
+.reveal-stagger > :nth-child(4) { animation-delay: 0.4s; }
+.reveal-stagger > :nth-child(5) { animation-delay: 0.5s; }
+.reveal-stagger > :nth-child(n+6) { animation-delay: 0.6s; }
 
-/* ============================================================
-   Tab Switcher
-   ============================================================ */
-.tab-bar {
-  display: flex;
-  gap: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  margin-bottom: 2rem;
-  overflow-x: auto;
-}
-
-.tab-btn {
-  padding: 0.75rem 1.5rem;
-  background: none;
-  border: none;
-  color: #666;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-
-.tab-btn:hover {
-  color: #aaa;
-}
-
-.tab-btn.active {
-  color: #50a0ff;
-  border-bottom-color: #50a0ff;
-}
-
-.tab-panel {
-  display: none;
-}
-
-.tab-panel.active {
-  display: block;
+.visible {
+  opacity: 1 !important;
 }
 
 /* ============================================================
@@ -1164,46 +1327,61 @@ footer a:hover {
   }
 
   .hero {
+    padding: 3rem 1.5rem;
     min-height: 70vh;
-    padding: 4rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
   }
 
   .stats-bar {
-    gap: 2rem;
-  }
-
-  .stat-number {
-    font-size: 2.25rem;
-  }
-
-  .hex-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-
-  .hex {
-    min-height: 130px;
-    font-size: 0.8rem;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
   }
 
   .tier-grid {
     grid-template-columns: 1fr;
   }
+
+  .milestones {
+    margin: 0 15px;
+  }
 }
 
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
-  .member-grid {
-    grid-template-columns: 1fr 1fr;
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
-  .card-grid {
-    grid-template-columns: 1fr;
+  .btn {
+    width: 100%;
+  }
+
+  .stats-bar {
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .milestones {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .milestone {
+    flex: 0 0 50%;
   }
 }
