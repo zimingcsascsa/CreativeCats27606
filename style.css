@@ -1,6 +1,5 @@
 /* ============================================================
    Creative Cats FTC 27606 — Main Stylesheet
-   Human-designed. No glow spam. No template grids.
    ============================================================ */
 
 /* --- Reset & Base --- */
@@ -26,7 +25,7 @@ body {
 }
 
 ::selection {
-  background: rgba(232, 180, 60, 0.25);
+  background: rgba(80, 160, 255, 0.25);
   color: #fff;
 }
 
@@ -79,7 +78,7 @@ header {
 .logo {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #e8b83c;
+  color: #50a0ff;
   letter-spacing: -0.02em;
   cursor: default;
 }
@@ -179,15 +178,8 @@ section {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 50% 40%, rgba(232, 184, 60, 0.06) 0%, transparent 70%);
+    radial-gradient(ellipse 60% 50% at 50% 40%, rgba(80, 160, 255, 0.06) 0%, transparent 70%);
   pointer-events: none;
-}
-
-.hero-cat {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-  opacity: 0;
-  animation: fadeInUp 0.8s 0.2s forwards;
 }
 
 .hero h1 {
@@ -198,12 +190,12 @@ section {
   line-height: 1.1;
   margin-bottom: 0.75rem;
   opacity: 0;
-  animation: fadeInUp 0.8s 0.4s forwards;
+  animation: fadeInUp 0.8s 0.2s forwards;
 }
 
 .hero h1 em {
   font-style: normal;
-  color: #e8b83c;
+  color: #50a0ff;
 }
 
 .hero h2 {
@@ -214,7 +206,7 @@ section {
   text-transform: uppercase;
   margin-bottom: 2rem;
   opacity: 0;
-  animation: fadeInUp 0.8s 0.6s forwards;
+  animation: fadeInUp 0.8s 0.4s forwards;
 }
 
 .hero-subtitle {
@@ -223,7 +215,7 @@ section {
   max-width: 480px;
   margin-bottom: 2.5rem;
   opacity: 0;
-  animation: fadeInUp 0.8s 0.8s forwards;
+  animation: fadeInUp 0.8s 0.6s forwards;
 }
 
 .hero-buttons {
@@ -232,7 +224,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   opacity: 0;
-  animation: fadeInUp 0.8s 1s forwards;
+  animation: fadeInUp 0.8s 0.8s forwards;
 }
 
 @keyframes fadeInUp {
@@ -264,15 +256,15 @@ section {
 }
 
 .btn-primary {
-  background: #e8b83c;
-  color: #111;
+  background: #50a0ff;
+  color: #fff;
 }
 .btn-primary:hover {
-  background: #f0c64a;
+  background: #6bb3ff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(232, 184, 60, 0.2);
+  box-shadow: 0 6px 20px rgba(80, 160, 255, 0.2);
   text-decoration: none;
-  color: #111;
+  color: #fff;
 }
 
 .btn-ghost {
@@ -308,7 +300,7 @@ section {
 .stat-number {
   font-size: 3rem;
   font-weight: 800;
-  color: #e8b83c;
+  color: #50a0ff;
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -375,7 +367,7 @@ section {
 }
 
 .card:hover {
-  border-color: rgba(232, 184, 60, 0.2);
+  border-color: rgba(80, 160, 255, 0.2);
   transform: translateY(-3px);
 }
 
@@ -396,7 +388,7 @@ section {
   display: block;
   width: 32px;
   height: 3px;
-  background: #e8b83c;
+  background: #50a0ff;
   border-radius: 2px;
   margin-bottom: 1rem;
 }
@@ -427,13 +419,13 @@ section {
   left: 0;
   right: 0;
   height: 3px;
-  background: #e8b83c;
+  background: #50a0ff;
   opacity: 0;
   transition: opacity 0.3s;
 }
 
 .achievement-card:hover {
-  border-color: rgba(232, 184, 60, 0.2);
+  border-color: rgba(80, 160, 255, 0.2);
   transform: translateY(-3px);
 }
 
@@ -450,7 +442,7 @@ section {
 
 .achievement-card .subtitle {
   font-size: 0.85rem;
-  color: #e8b83c;
+  color: #50a0ff;
   font-weight: 600;
   margin-bottom: 0.75rem;
   text-transform: uppercase;
@@ -476,8 +468,15 @@ section {
 }
 
 .about-text strong {
-  color: #e8b83c;
+  color: #50a0ff;
   font-weight: 600;
+}
+
+.about-text h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e8e8e8;
+  margin: 2rem 0 0.75rem;
 }
 
 .info-box {
@@ -495,7 +494,7 @@ section {
 }
 
 .info-box strong {
-  color: #e8b83c;
+  color: #50a0ff;
 }
 
 /* ============================================================
@@ -517,7 +516,7 @@ section {
 }
 
 .member-card:hover {
-  border-color: rgba(232, 184, 60, 0.2);
+  border-color: rgba(80, 160, 255, 0.2);
   transform: translateY(-3px);
 }
 
@@ -527,14 +526,14 @@ section {
   border-radius: 50%;
   margin: 0 auto 1rem;
   overflow: hidden;
-  background: rgba(232, 184, 60, 0.08);
+  background: rgba(80, 160, 255, 0.08);
   border: 2px solid rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
   font-weight: 700;
-  color: #e8b83c;
+  color: #50a0ff;
 }
 
 .member-photo img {
@@ -553,7 +552,7 @@ section {
 
 .member-role {
   font-size: 0.8rem;
-  color: #e8b83c;
+  color: #50a0ff;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -592,7 +591,7 @@ section {
 
 .robot-gallery img:hover {
   transform: scale(1.02);
-  border-color: rgba(232, 184, 60, 0.25);
+  border-color: rgba(80, 160, 255, 0.25);
 }
 
 /* ============================================================
@@ -608,7 +607,7 @@ section {
 }
 
 .mentor-card:hover {
-  border-color: rgba(232, 184, 60, 0.15);
+  border-color: rgba(80, 160, 255, 0.15);
 }
 
 .mentor-name {
@@ -627,8 +626,8 @@ section {
   font-style: italic;
   color: #aaa;
   padding: 0.75rem 1rem;
-  background: rgba(232, 184, 60, 0.04);
-  border-left: 3px solid rgba(232, 184, 60, 0.3);
+  background: rgba(80, 160, 255, 0.04);
+  border-left: 3px solid rgba(80, 160, 255, 0.3);
   border-radius: 0 6px 6px 0;
   font-size: 0.95rem;
 }
@@ -649,7 +648,7 @@ section {
   justify-content: center;
   text-align: center;
   padding: 1.5rem 1rem;
-  background: rgba(232, 184, 60, 0.04);
+  background: rgba(80, 160, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 10px;
   font-size: 0.9rem;
@@ -662,16 +661,16 @@ section {
 }
 
 .hex:hover {
-  background: rgba(232, 184, 60, 0.08);
-  border-color: rgba(232, 184, 60, 0.2);
+  background: rgba(80, 160, 255, 0.08);
+  border-color: rgba(80, 160, 255, 0.2);
   color: #e8e8e8;
   transform: translateY(-4px);
 }
 
 .hex.highlight {
-  background: rgba(232, 184, 60, 0.12);
-  color: #e8b83c;
-  border-color: rgba(232, 184, 60, 0.3);
+  background: rgba(80, 160, 255, 0.12);
+  color: #50a0ff;
+  border-color: rgba(80, 160, 255, 0.3);
   font-weight: 700;
 }
 
@@ -714,7 +713,7 @@ section {
   top: 0; left: 0;
   height: 100%;
   border-radius: 4px;
-  background: #e8b83c;
+  background: #50a0ff;
   width: 0%;
   transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -766,17 +765,17 @@ section {
 }
 
 .milestone.reached .dot {
-  background: #e8b83c;
-  border-color: #e8b83c;
-  color: #111;
+  background: #50a0ff;
+  border-color: #50a0ff;
+  color: #fff;
 }
 
 .milestone.reached .label {
-  color: #e8b83c;
+  color: #50a0ff;
 }
 
 .milestone.reached .label small {
-  color: rgba(232, 184, 60, 0.5);
+  color: rgba(80, 160, 255, 0.5);
 }
 
 .progress-percent {
@@ -784,7 +783,7 @@ section {
   margin-top: 1.25rem;
   font-size: 1.75rem;
   font-weight: 800;
-  color: #e8b83c;
+  color: #50a0ff;
 }
 
 .progress-percent span {
@@ -822,7 +821,7 @@ tbody tr {
 }
 
 tbody tr:hover {
-  background: rgba(232, 184, 60, 0.03);
+  background: rgba(80, 160, 255, 0.03);
 }
 
 tbody tr:last-child {
@@ -862,7 +861,7 @@ li::before {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #e8b83c;
+  background: #50a0ff;
 }
 
 /* ============================================================
@@ -884,7 +883,7 @@ li::before {
 }
 
 .media-item:hover {
-  border-color: rgba(232, 184, 60, 0.2);
+  border-color: rgba(80, 160, 255, 0.2);
 }
 
 .media-item img {
@@ -931,7 +930,7 @@ li::before {
 }
 
 .contact-box strong {
-  color: #e8b83c;
+  color: #50a0ff;
 }
 
 .social-links {
@@ -954,9 +953,115 @@ li::before {
 }
 
 .social-links a:hover {
-  background: #e8b83c;
-  color: #111;
-  border-color: #e8b83c;
+  background: #50a0ff;
+  color: #fff;
+  border-color: #50a0ff;
+}
+
+/* ============================================================
+   Sponsor Tiers
+   ============================================================ */
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.tier-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: border-color 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.tier-card:hover {
+  border-color: rgba(80, 160, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.tier-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e8e8e8;
+  margin-bottom: 0.25rem;
+}
+
+.tier-card .tier-price {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #50a0ff;
+  margin: 0.5rem 0 1rem;
+}
+
+.tier-card .tier-price span {
+  font-size: 0.5em;
+  font-weight: 400;
+  color: #666;
+}
+
+.tier-card ul {
+  margin-bottom: 1.5rem;
+}
+
+.tier-card li {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.tier-card.featured {
+  border-color: rgba(80, 160, 255, 0.3);
+  background: rgba(80, 160, 255, 0.04);
+}
+
+.tier-card.featured::before {
+  content: 'Most Popular';
+  position: absolute;
+  top: 12px;
+  right: -28px;
+  background: #50a0ff;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.3rem 2rem;
+  transform: rotate(45deg);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   Sponsor Logos
+   ============================================================ */
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.sponsor-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  min-width: 160px;
+  min-height: 80px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #888;
+  transition: border-color 0.3s;
+}
+
+.sponsor-logo:hover {
+  border-color: rgba(80, 160, 255, 0.15);
 }
 
 /* ============================================================
@@ -984,7 +1089,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #e8b83c;
+  color: #50a0ff;
 }
 
 /* ============================================================
@@ -1010,7 +1115,7 @@ footer a:hover {
 .reveal-stagger > .reveal:nth-child(6) { transition-delay: 0.4s; }
 
 /* ============================================================
-   Tab Switcher (About page)
+   Tab Switcher
    ============================================================ */
 .tab-bar {
   display: flex;
@@ -1038,8 +1143,8 @@ footer a:hover {
 }
 
 .tab-btn.active {
-  color: #e8b83c;
-  border-bottom-color: #e8b83c;
+  color: #50a0ff;
+  border-bottom-color: #50a0ff;
 }
 
 .tab-panel {
@@ -1078,6 +1183,10 @@ footer a:hover {
   .hex {
     min-height: 130px;
     font-size: 0.8rem;
+  }
+
+  .tier-grid {
+    grid-template-columns: 1fr;
   }
 }
 

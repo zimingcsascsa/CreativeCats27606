@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creative Cats FTC 27606 — Home</title>
+  <title>Creative Cats FTC 27606</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,6 +21,7 @@
         <a href="goals.html">Goals</a>
         <a href="logs.html">Logs</a>
         <a href="media.html">Media</a>
+        <a href="sponsors.html">Sponsors</a>
       </nav>
     </div>
   </header>
@@ -29,7 +30,6 @@
     <!-- Hero -->
     <section class="hero" id="hero">
       <canvas id="hero-tilt"></canvas>
-      <div class="hero-cat">🐱</div>
       <h1>Creative <em>Cats</em></h1>
       <h2>FTC Team 27606 &middot; Austin, TX</h2>
       <p class="hero-subtitle">A small team with big ideas — building robots, breaking things, and learning fast.</p>
@@ -93,14 +93,14 @@
         <p><strong>Members</strong> &nbsp;Tanvi, Aish, Sachin, Ziming, Bodin, Isaac, Oye, Greeshmi, Naveen &amp; more</p>
       </div>
       <div style="margin-top: 2rem;" class="reveal">
-        <a href="about.html" class="btn btn-ghost">More About Us →</a>
+        <a href="about.html" class="btn btn-ghost">More About Us &rarr;</a>
       </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Creative Cats FTC 27606</p>
-    <p><a href="index.html">Back to top</a> · <a href="goals.html#contact">Contact</a></p>
+    <p><a href="index.html">Back to top</a> &middot; <a href="goals.html#contact">Contact</a></p>
   </footer>
 
   <script src="reveal.js"></script>
@@ -156,8 +156,8 @@
         heroMouse.x, heroMouse.y, 0,
         heroMouse.x, heroMouse.y, 350
       );
-      g.addColorStop(0, 'rgba(232, 184, 60, 0.06)');
-      g.addColorStop(1, 'rgba(232, 184, 60, 0)');
+      g.addColorStop(0, 'rgba(80, 160, 255, 0.06)');
+      g.addColorStop(1, 'rgba(80, 160, 255, 0)');
       tiltCtx.fillStyle = g;
       tiltCtx.fillRect(0, 0, tiltCanvas.width, tiltCanvas.height);
       requestAnimationFrame(drawGlow);
