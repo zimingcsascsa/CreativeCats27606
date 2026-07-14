@@ -36,84 +36,92 @@
       <div class="member-grid reveal-stagger">
         <div class="member-card reveal">
           <div class="member-photo"><img src="tanvi.png" alt="Tanvi"></div>
+          <div class="school-badge">Westwood</div>
           <div class="member-name">Tanvi</div>
           <div class="member-role">Captain · Outreach</div>
           <div class="member-bio">Leading with dedication and a genuine love for robotics and community work.</div>
         </div>
         <div class="member-card reveal">
           <div class="member-photo"><img src="aish.png" alt="Aish"></div>
+          <div class="school-badge">Cedar Park</div>
           <div class="member-name">Aish</div>
           <div class="member-role">Co-Captain · CAD</div>
           <div class="member-bio">Expert in computer-aided design and keeping the team on track.</div>
         </div>
         <div class="member-card reveal">
           <div class="member-photo"><img src="ziming.png" alt="Ziming"></div>
+          <div class="school-badge">Meridian</div>
           <div class="member-name">Ziming</div>
           <div class="member-role">Lead Builder · Programmer</div>
           <div class="member-bio">The driving force behind our robot. Takes no breaks. Seriously.</div>
         </div>
         <div class="member-card reveal">
           <div class="member-photo"><img src="issac.png" alt="Isaac"></div>
+          <div class="school-badge">Meridian</div>
           <div class="member-name">Isaac</div>
           <div class="member-role">Team Member</div>
           <div class="member-bio">Active contributor who shows up and gets things done.</div>
         </div>
         <div class="member-card reveal">
           <div class="member-photo"><img src="oye.png" alt="Oye"></div>
+          <div class="school-badge">Meridian</div>
           <div class="member-name">Oye</div>
           <div class="member-role">Team Member</div>
           <div class="member-bio">Dedicated to whatever the team needs that week.</div>
         </div>
         <div class="member-card reveal">
           <div class="member-photo"><img src="greeshmi.png" alt="Greeshmi"></div>
+          <div class="school-badge">Meridian</div>
           <div class="member-name">Greeshmi</div>
           <div class="member-role">Driver</div>
           <div class="member-bio">Our skilled driver — calm under pressure.</div>
         </div>
         <div class="member-card reveal">
           <div class="member-photo"><img src="naveen.png" alt="Naveen"></div>
+          <div class="school-badge">Meridian</div>
           <div class="member-name">Naveen</div>
           <div class="member-role">Mentor</div>
           <div class="member-bio">Engineering mentor and "The CAD Guy"</div>
         </div>
         <div class="member-card reveal">
+          
           <div class="member-photo">C</div>
+          <div class="school-badge">Meridian</div>
           <div class="member-name">Carsten</div>
           <div class="member-role">Software / Hardware</div>
           <div class="member-bio">Plays Geometry Dash all day. "Rocket man since yesterday."</div>
         </div>
         <div class="member-card reveal">
           <div class="member-photo">R</div>
+          <div class="school-badge">Meridian</div>
           <div class="member-name">Riya</div>
           <div class="member-role">Outreach</div>
           <div class="member-bio">TBD</div>
         </div>
         <div class="member-card reveal">
           <div class="member-photo">F</div>
+          <div class="school-badge">Meridian</div>
           <div class="member-name">Fnan</div>
           <div class="member-role">CAD</div>
           <div class="member-bio">Brought a passenger aircraft instruction manual to school. Enough said.</div>
         </div>
         <div class="member-card reveal">
           <div class="member-photo">R</div>
+          <div class="school-badge">Westwood</div>
           <div class="member-name">Raveena</div>
           <div class="member-role">CAD</div>
           <div class="member-bio">TBD</div>
         </div>
         <div class="member-card reveal">
-          <div class="member-photo">S</div>
-          <div class="member-name">Simpal</div>
-          <div class="member-role">Software</div>
-          <div class="member-bio">TBD</div>
-        </div>
-        <div class="member-card reveal">
           <div class="member-photo">M</div>
+          <div class="school-badge">Meridian</div>
           <div class="member-name">Michelle</div>
           <div class="member-role">Outreach</div>
           <div class="member-bio">TBD</div>
         </div>
         <div class="member-card reveal">
           <div class="member-photo">L</div>
+          <div class="school-badge">Westwood</div>
           <div class="member-name">Lohitha</div>
           <div class="member-role">Outreach</div>
           <div class="member-bio">TBD</div>
@@ -192,7 +200,32 @@
     <p><a href="index.html">Back to top</a> · <a href="goals.html#contact">Contact</a></p>
   </footer>
 
-  <script src="reveal.js"></script>
-  <script src="interactive.js"></script>
+  <script>
+    // School filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const memberCards = document.querySelectorAll('.member-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const school = btn.dataset.school;
+        
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // Filter cards
+        memberCards.forEach(card => {
+          if (school === 'all' || card.dataset.school === school) {
+            card.style.display = '';
+            card.offsetWidth; // Trigger reflow
+            card.classList.add('visible');
+          } else {
+            card.style.display = 'none';
+            card.classList.remove('visible');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
