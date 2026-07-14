@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Team Plan - Creative Cats FTC Robotics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Season Plan — Creative Cats FTC 27606</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="header-container">
       <div class="logo">Creative Cats</div>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -20,33 +24,65 @@
       </nav>
     </div>
   </header>
+
   <main>
     <section>
-      <h2 class="reveal">Season Overview</h2>
-      <div class="plan-cards">
-        <div class="card reveal"><h3>Kickoff</h3><p>Introduce new members, review game rules, and set season goals.</p></div>
-        <div class="card reveal"><h3>Prototyping</h3><p>Brainstorm and test multiple robot designs before committing to a build.</p></div>
-        <div class="card reveal"><h3>Build Sessions</h3><p>Intensive build sessions and programming sprints to bring the robot to life.</p></div>
-        <div class="card reveal"><h3>Outreach</h3><p>Robot demos in schools and community events to spread STEM awareness.</p></div>
-        <div class="card reveal"><h3>Competitions</h3><p>Scrimmages, League Meets, and State — putting our work to the test.</p></div>
-        <div class="card reveal"><h3>Review</h3><p>Reflect on the season, document lessons learned, and prepare for next year.</p></div>
+      <div class="section-header reveal">
+        <h2>Season Overview</h2>
+        <p>How we go from zero to competition-ready.</p>
+      </div>
+
+      <div class="card-grid reveal-stagger">
+        <div class="card reveal">
+          <span class="card-accent"></span>
+          <h3>Kickoff</h3>
+          <p>Introduce new members, review game rules, and set season goals.</p>
+        </div>
+        <div class="card reveal">
+          <span class="card-accent"></span>
+          <h3>Prototyping</h3>
+          <p>Brainstorm and test multiple robot designs before committing to a build.</p>
+        </div>
+        <div class="card reveal">
+          <span class="card-accent"></span>
+          <h3>Build Sessions</h3>
+          <p>Intensive build sessions and programming sprints to bring the robot to life.</p>
+        </div>
+        <div class="card reveal">
+          <span class="card-accent"></span>
+          <h3>Outreach</h3>
+          <p>Robot demos in schools and community events to spread STEM awareness.</p>
+        </div>
+        <div class="card reveal">
+          <span class="card-accent"></span>
+          <h3>Competitions</h3>
+          <p>Scrimmages, League Meets, and State — putting our work to the test.</p>
+        </div>
+        <div class="card reveal">
+          <span class="card-accent"></span>
+          <h3>Review</h3>
+          <p>Reflect on the season, document lessons, and prep for next year.</p>
+        </div>
+      </div>
+
+      <div class="about-text reveal" style="margin-top: 2.5rem;">
+        <h3>Goals</h3>
+        <ul>
+          <li>Consistent autonomous scoring</li>
+          <li>100+ outreach hours</li>
+          <li>Mentor 5+ rookie teams</li>
+          <li>Document and improve robot reliability</li>
+          <li>Grow social media presence</li>
+        </ul>
       </div>
     </section>
-    <section>
-      <h2 class="reveal">Goals</h2>
-      <ul class="reveal">
-        <li>Consistent autonomous scoring</li>
-        <li>100+ outreach hours</li>
-        <li>Mentor 5+ rookie teams</li>
-        <li>Document and improve robot reliability</li>
-        <li>Grow social media presence</li>
-      </ul>
-    </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 Creative Cats FTC 27606. All rights reserved.</p>
-    <p><a href="index.html">Back to top</a> | <a href="goals.html#contact">Contact Us</a></p>
+    <p>&copy; 2025 Creative Cats FTC 27606</p>
+    <p><a href="index.html">Back to top</a> · <a href="goals.html#contact">Contact</a></p>
   </footer>
+
   <script src="reveal.js"></script>
 </body>
 </html>

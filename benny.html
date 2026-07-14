@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Benny - Creative Cats FTC Robotics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benny — Creative Cats FTC 27606</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="header-container">
       <div class="logo">Creative Cats</div>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -20,24 +24,30 @@
       </nav>
     </div>
   </header>
+
   <main>
     <section>
-      <h2 class="reveal">Benny — Our Robot</h2>
-      <p class="section-subtitle reveal">Named with love, built with precision.</p>
-      <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin: 2em 0;">
-        <img src="Benny2.jpg" class="media-center" alt="Benny Robot" style="width:100%; max-width:400px;">
-        <img src="Benny3.jpg" class="media-center" alt="Benny Robot" style="width:100%; max-width:400px;">
-        <img src="Benny4.jpg" class="media-center" alt="Benny Robot" style="width:100%; max-width:400px;">
-        <img src="Benny5.jpg" class="media-center" alt="Benny Robot" style="width:100%; max-width:400px;">
-        <img src="Benny6.jpg" class="media-center" alt="Benny Robot" style="width:100%; max-width:400px;">
-        <img src="Benny1.jpg" class="media-center" alt="Benny Robot" style="width:100%; max-width:400px;">
+      <div class="section-header reveal">
+        <h2>Benny — Our Robot</h2>
+        <p>Named with love, built with precision.</p>
+      </div>
+
+      <div class="robot-gallery reveal">
+        <img src="Benny2.jpg" alt="Benny Robot">
+        <img src="Benny3.jpg" alt="Benny Robot">
+        <img src="Benny4.jpg" alt="Benny Robot">
+        <img src="Benny5.jpg" alt="Benny Robot">
+        <img src="Benny6.jpg" alt="Benny Robot">
+        <img src="Benny1.jpg" alt="Benny Robot">
       </div>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 Creative Cats FTC 27606. All rights reserved.</p>
-    <p><a href="index.html">Back to top</a> | <a href="goals.html#contact">Contact Us</a></p>
+    <p>&copy; 2025 Creative Cats FTC 27606</p>
+    <p><a href="index.html">Back to top</a> · <a href="goals.html#contact">Contact</a></p>
   </footer>
+
   <script src="reveal.js"></script>
 </body>
 </html>

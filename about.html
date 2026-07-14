@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About - Creative Cats FTC Robotics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Creative Cats FTC 27606</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="header-container">
       <div class="logo">Creative Cats</div>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
       <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="about.html" class="active">About</a>
         <a href="team.html">Team</a>
         <a href="robot.html">Robot</a>
         <a href="goals.html">Goals</a>
@@ -20,65 +24,143 @@
       </nav>
     </div>
   </header>
+
   <main>
-    <section id="team" class="team-section">
-      <h2 class="reveal">Team Structure</h2>
-      <div class="plan-cards">
-        <div class="card reveal"><h3>Recruitment</h3><p>Open tryouts and school announcements to find passionate new members.</p></div>
-        <div class="card reveal"><h3>Learning</h3><p>Teaching new members about FIRST, robot design, and team culture.</p></div>
-        <div class="card reveal"><h3>Instruction</h3><p>Hands-on workshops for hardware, software, and CAD skills.</p></div>
-        <div class="card reveal"><h3>FUN</h3><p>Team bonding events and building a supportive community.</p></div>
+    <section>
+      <div class="section-header reveal">
+        <h2>About Us</h2>
+        <p>How we work, what we believe, and where we're headed.</p>
       </div>
 
-      <h3 class="reveal">Team Roles</h3>
-      <p class="reveal">Every member chooses a specialty (Hardware, Software, CAD, Outreach). Everyone learns a bit of everything for true teamwork.</p>
-      <p class="reveal">Captains are picked by democratic vote after speeches. Two co-captains help balance leadership.</p>
+      <!-- Tabs -->
+      <div class="tab-bar reveal">
+        <button class="tab-btn active" data-tab="structure">Team Structure</button>
+        <button class="tab-btn" data-tab="roles">Roles</button>
+        <button class="tab-btn" data-tab="mentors">Mentors</button>
+        <button class="tab-btn" data-tab="financial">Financial</button>
+      </div>
 
-      <h3 class="reveal">Team Plan</h3>
-      <h4 class="reveal">Season Overview</h4>
-      <ul class="reveal">
-        <li>Kickoff: Introduce new members and review rules</li>
-        <li>Prototyping and brainstorming (multiple designs tested)</li>
-        <li>Build sessions and programming sprints</li>
-        <li>Outreach events/robot demos in schools/community</li>
-        <li>Competitions: Scrimmages, Leagues, State</li>
-        <li>Review, reflect, and prepare for next season</li>
-      </ul>
-      <h4 class="reveal">Goals</h4>
-      <ul class="reveal">
-        <li>Consistent autonomous scoring</li>
-        <li>100+ outreach hours</li>
-        <li>Mentor 5+ rookie teams</li>
-        <li>Document and improve robot reliability</li>
-        <li>Grow social media presence</li>
-      </ul>
+      <!-- Structure -->
+      <div class="tab-panel active" id="tab-structure">
+        <div class="card-grid reveal-stagger">
+          <div class="card reveal">
+            <span class="card-accent"></span>
+            <h3>Recruitment</h3>
+            <p>Open tryouts and school announcements. We look for people who are curious, not just experienced.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card-accent"></span>
+            <h3>Learning</h3>
+            <p>New members learn about FIRST, robot design, and how we work as a team before touching hardware.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card-accent"></span>
+            <h3>Instruction</h3>
+            <p>Hands-on workshops for hardware, software, and CAD. Everyone learns the basics of everything.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card-accent"></span>
+            <h3>FUN</h3>
+            <p>Team bonding events and building a community. If it's not fun, what's the point?</p>
+          </div>
+        </div>
 
-      <h3 class="reveal">Financial Plan</h3>
-      <table class="reveal">
-        <thead>
-          <tr><th>Item</th><th>Description</th><th>Income/cost</th><th>Balance</th></tr>
-        </thead>
-        <tbody>
-          <tr><th>Total</th><td></td><td></td><td></td></tr>
-        </tbody>
-      </table>
+        <div class="about-text reveal" style="margin-top: 2.5rem;">
+          <h3>Season Plan</h3>
+          <ul>
+            <li>Kickoff — introduce new members, review rules</li>
+            <li>Prototyping — test multiple designs before committing</li>
+            <li>Build sessions and programming sprints</li>
+            <li>Outreach events and robot demos</li>
+            <li>Competitions — scrimmages, leagues, state</li>
+            <li>Review, reflect, prep for next season</li>
+          </ul>
+        </div>
 
-      <h3 class="reveal">Mentors</h3>
-      <h4 class="reveal">Our Guides</h4>
-      <ul class="reveal">
-        <li>Senor Naveen – Engineering mentor, "The CAD Guy" Invented the NUTBUSTER<br>Quote: <strong>Remember: righty tighty lefty loosey - Naveen, 2025</strong></li>
-        <li>Mrs. Beckwith (Monica) – Outreach coordinator, Lead of coding, Manager, Bodin's Mom<br>Quote: <strong>Rookies today Champions Tomorrow - Monica, 2025</strong></li>
-        <li>Mr. Beckwith (Ben) – Strategy Department, Lead of Engineering, Bodin's Dad<br>Quote: <strong>We need to take out the Enemy Team - Ben 2025</strong></li>
-      </ul>
-      <p class="reveal">Mentors help but let students lead, making every voice heard and encouraging innovation.</p>
+        <div class="about-text reveal">
+          <h3>Goals</h3>
+          <ul>
+            <li>Consistent autonomous scoring</li>
+            <li>100+ outreach hours</li>
+            <li>Mentor 5+ rookie teams</li>
+            <li>Document and improve robot reliability</li>
+            <li>Grow social media presence</li>
+          </ul>
+        </div>
+      </div>
 
+      <!-- Roles -->
+      <div class="tab-panel" id="tab-roles">
+        <div class="about-text reveal">
+          <p>Every member picks a specialty — <strong>Hardware</strong>, <strong>Software</strong>, <strong>CAD</strong>, or <strong>Outreach</strong>. But everyone learns a bit of everything. That's how real teams work.</p>
+          <p>Captains are elected by democratic vote after giving speeches. Two co-captains share the load so no one person burns out.</p>
+          <h3 style="margin-top: 2rem;">Team Plan</h3>
+          <p>We meet once a week (sometimes more before competitions). Each session has a clear agenda — build, code, test, or outreach. We document everything in meeting logs.</p>
+        </div>
+      </div>
 
+      <!-- Mentors -->
+      <div class="tab-panel" id="tab-mentors">
+        <div class="mentor-card reveal">
+          <div class="mentor-name">Senor Naveen</div>
+          <div class="mentor-role">Engineering Mentor / "The CAD Guy" / Inventor of the NUTBUSTER</div>
+          <div class="mentor-quote">"Remember: righty tighty lefty loosey" — Naveen, 2025</div>
+        </div>
+        <div class="mentor-card reveal">
+          <div class="mentor-name">Mrs. Beckwith (Monica)</div>
+          <div class="mentor-role">Outreach Coordinator / Lead of Coding / Manager / Bodin's Mom</div>
+          <div class="mentor-quote">"Rookies today, Champions tomorrow" — Monica, 2025</div>
+        </div>
+        <div class="mentor-card reveal">
+          <div class="mentor-name">Mr. Beckwith (Ben)</div>
+          <div class="mentor-role">Strategy Department / Lead of Engineering / Bodin's Dad</div>
+          <div class="mentor-quote">"We need to take out the Enemy Team" — Ben, 2025</div>
+        </div>
+        <div class="about-text reveal" style="margin-top: 1.5rem;">
+          <p>Mentors guide, but students lead. Every voice matters, and mentors make sure that stays true.</p>
+        </div>
+      </div>
+
+      <!-- Financial -->
+      <div class="tab-panel" id="tab-financial">
+        <table class="reveal">
+          <thead>
+            <tr><th>Item</th><th>Description</th><th>Income/Cost</th><th>Balance</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Total</th><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+        <p class="reveal" style="color: #666; font-size: 0.9rem;">We're a small team — every dollar counts. If you'd to sponsor us, <a href="goals.html#contact">get in touch</a>.</p>
+      </div>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 Creative Cats FTC 27606. All rights reserved.</p>
-    <p><a href="index.html">Back to top</a> | <a href="goals.html#contact">Contact Us</a></p>
+    <p>&copy; 2025 Creative Cats FTC 27606</p>
+    <p><a href="index.html">Back to top</a> · <a href="goals.html#contact">Contact</a></p>
   </footer>
+
   <script src="reveal.js"></script>
+  <script>
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        const panel = document.getElementById('tab-' + btn.dataset.tab);
+        if (panel) {
+          panel.classList.add('active');
+          // Re-trigger reveal for newly visible elements
+          panel.querySelectorAll('.reveal').forEach(el => {
+            el.classList.remove('visible');
+            void el.offsetWidth;
+            el.classList.add('visible');
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>

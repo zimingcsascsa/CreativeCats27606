@@ -2,40 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mentors - Creative Cats FTC Robotics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentors — Creative Cats FTC 27606</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .mentor-card {
-      background: rgba(20, 20, 30, 0.8);
-      padding: 2rem;
-      border-radius: 12px;
-      border: 1px solid rgba(0, 168, 255, 0.3);
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 113, 227, 0.2);
-      margin-bottom: 1.5rem;
-    }
-    .mentor-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(0, 168, 255, 0.4), 0 0 20px rgba(0, 168, 255, 0.2);
-      border-color: #00a8ff;
-    }
-    .mentor-name { font-size: 22px; font-weight: 700; color: #00a8ff; text-shadow: 0 0 10px rgba(0, 168, 255, 0.5); }
-    .mentor-role { color: #b0b0b0; font-size: 16px; margin: 0.3em 0 0.8em; }
-    .mentor-quote {
-      font-style: italic;
-      color: #00d4ff;
-      padding: 0.8em 1.2em;
-      background: rgba(0, 168, 255, 0.08);
-      border-left: 3px solid rgba(0, 168, 255, 0.5);
-      border-radius: 0 8px 8px 0;
-      margin-top: 0.8em;
-    }
-  </style>
 </head>
 <body>
   <header>
     <div class="header-container">
       <div class="logo">Creative Cats</div>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -47,32 +24,43 @@
       </nav>
     </div>
   </header>
+
   <main>
     <section>
-      <h2 class="reveal">Our Mentors</h2>
-      <p class="section-subtitle reveal">Guiding us every step of the way.</p>
+      <div class="section-header reveal">
+        <h2>Our Mentors</h2>
+        <p>They guide, we lead. That's the deal.</p>
+      </div>
+
       <div class="mentor-card reveal">
         <div class="mentor-name">Senor Naveen</div>
         <div class="mentor-role">Engineering Mentor / "The CAD Guy" / Inventor of the NUTBUSTER</div>
         <div class="mentor-quote">"Remember: righty tighty lefty loosey" — Naveen, 2025</div>
       </div>
+
       <div class="mentor-card reveal">
         <div class="mentor-name">Mrs. Beckwith (Monica)</div>
         <div class="mentor-role">Outreach Coordinator / Lead of Coding / Manager / Bodin's Mom</div>
         <div class="mentor-quote">"Rookies today, Champions tomorrow" — Monica, 2025</div>
       </div>
+
       <div class="mentor-card reveal">
         <div class="mentor-name">Mr. Beckwith (Ben)</div>
         <div class="mentor-role">Strategy Department / Lead of Engineering / Bodin's Dad</div>
         <div class="mentor-quote">"We need to take out the Enemy Team" — Ben, 2025</div>
       </div>
-      <p class="reveal" style="margin-top: 2rem;">Mentors help but let students lead, making every voice heard and encouraging innovation.</p>
+
+      <div class="about-text reveal" style="margin-top: 1.5rem;">
+        <p>Mentors help but let students lead, making every voice heard and encouraging innovation.</p>
+      </div>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 Creative Cats FTC 27606. All rights reserved.</p>
-    <p><a href="index.html">Back to top</a> | <a href="goals.html#contact">Contact Us</a></p>
+    <p>&copy; 2025 Creative Cats FTC 27606</p>
+    <p><a href="index.html">Back to top</a> · <a href="goals.html#contact">Contact</a></p>
   </footer>
+
   <script src="reveal.js"></script>
 </body>
 </html>

@@ -2,42 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Meeting Logs - Creative Cats FTC Robotics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Logs — Creative Cats FTC 27606</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="header-container">
       <div class="logo">Creative Cats</div>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="team.html">Team</a>
         <a href="robot.html">Robot</a>
         <a href="goals.html">Goals</a>
-        <a href="logs.html">Logs</a>
+        <a href="logs.html" class="active">Logs</a>
         <a href="media.html">Media</a>
       </nav>
     </div>
   </header>
+
   <main>
-    <section id="logs">
-      <h2 class="reveal">Meeting Logs</h2>
-      <p class="section-subtitle reveal">Detailed records of our team meetings, progress, and discussions</p>
+    <section>
+      <div class="section-header reveal">
+        <h2>Meeting Logs</h2>
+        <p>What happened, what we learned, what broke.</p>
+      </div>
+
       <table class="reveal">
         <thead>
           <tr><th>Date</th><th>Notes</th></tr>
         </thead>
         <tbody>
-          <tr><td colspan="2" style="text-align:center; color:#8ab4d6; padding:2em;">No meetings logged yet for the 2026-2027 season.</td></tr>
+          <tr>
+            <td colspan="2" style="text-align: center; color: #666; padding: 2rem;">
+              No meetings logged yet for the 2026–2027 season. Check back soon.
+            </td>
+          </tr>
         </tbody>
       </table>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 Creative Cats FTC 27606. All rights reserved.</p>
-    <p><a href="index.html">Back to top</a> | <a href="goals.html#contact">Contact Us</a></p>
+    <p>&copy; 2025 Creative Cats FTC 27606</p>
+    <p><a href="index.html">Back to top</a> · <a href="goals.html#contact">Contact</a></p>
   </footer>
+
   <script src="reveal.js"></script>
 </body>
 </html>

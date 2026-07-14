@@ -2,52 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Media - Creative Cats FTC Robotics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media — Creative Cats FTC 27606</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .media-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-    .media-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      border: 1px solid rgba(0, 168, 255, 0.3);
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 113, 227, 0.2);
-    }
-    .media-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 30px rgba(0, 168, 255, 0.4), 0 0 20px rgba(0, 168, 255, 0.2);
-      border-color: #00a8ff;
-    }
-    .media-item img {
-      width: 100%;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-    .media-item:hover img {
-      transform: scale(1.05);
-    }
-    .media-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0; right: 0;
-      padding: 1rem;
-      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-      color: #fff;
-      font-weight: 600;
-      font-size: 14px;
-    }
-  </style>
 </head>
 <body>
   <header>
     <div class="header-container">
       <div class="logo">Creative Cats</div>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -55,31 +20,64 @@
         <a href="robot.html">Robot</a>
         <a href="goals.html">Goals</a>
         <a href="logs.html">Logs</a>
-        <a href="media.html">Media</a>
+        <a href="media.html" class="active">Media</a>
       </nav>
     </div>
   </header>
+
   <main>
     <section>
-      <h2 class="reveal">Media Gallery</h2>
-      <p class="section-subtitle reveal">Photos and videos from our season.</p>
+      <div class="section-header reveal">
+        <h2>Media Gallery</h2>
+        <p>Photos from our season. Robots, team, and everything in between.</p>
+      </div>
+
       <div class="media-gallery">
-        <div class="media-item reveal"><img src="robot1.png" alt="Robot Design"><div class="media-caption">Robot V1 — Drive Train</div></div>
-        <div class="media-item reveal"><img src="robot2.png" alt="Robot Design"><div class="media-caption">Robot V1 — Launcher</div></div>
-        <div class="media-item reveal"><img src="robot3.png" alt="Robot Design"><div class="media-caption">Robot V1 — Full Build</div></div>
-        <div class="media-item reveal"><img src="robot4.png" alt="Robot Design"><div class="media-caption">Robot V2 — Intake System</div></div>
-        <div class="media-item reveal"><img src="robot6.png" alt="Robot Design"><div class="media-caption">Robot V2 — Side View</div></div>
-        <div class="media-item reveal"><img src="robot7.png" alt="Robot Design"><div class="media-caption">Robot V2 — Detail</div></div>
-        <div class="media-item reveal"><img src="robot8.png" alt="Robot Design"><div class="media-caption">Robot V2 — Electronics</div></div>
-        <div class="media-item reveal"><img src="robot9.png" alt="Robot Design"><div class="media-caption">Robot V2 — Complete</div></div>
-        <div class="media-item reveal"><img src="mascot.jpeg" alt="Team Mascot"><div class="media-caption">Our Mascot</div></div>
+        <div class="media-item reveal">
+          <img src="robot1.png" alt="Robot Design">
+          <div class="media-caption">Robot V1 — Drive Train</div>
+        </div>
+        <div class="media-item reveal">
+          <img src="robot2.png" alt="Robot Design">
+          <div class="media-caption">Robot V1 — Launcher</div>
+        </div>
+        <div class="media-item reveal">
+          <img src="robot3.png" alt="Robot Design">
+          <div class="media-caption">Robot V1 — Full Build</div>
+        </div>
+        <div class="media-item reveal">
+          <img src="robot4.png" alt="Robot Design">
+          <div class="media-caption">Robot V2 — Intake System</div>
+        </div>
+        <div class="media-item reveal">
+          <img src="robot6.png" alt="Robot Design">
+          <div class="media-caption">Robot V2 — Side View</div>
+        </div>
+        <div class="media-item reveal">
+          <img src="robot7.png" alt="Robot Design">
+          <div class="media-caption">Robot V2 — Detail</div>
+        </div>
+        <div class="media-item reveal">
+          <img src="robot8.png" alt="Robot Design">
+          <div class="media-caption">Robot V2 — Electronics</div>
+        </div>
+        <div class="media-item reveal">
+          <img src="robot9.png" alt="Robot Design">
+          <div class="media-caption">Robot V2 — Complete</div>
+        </div>
+        <div class="media-item reveal">
+          <img src="mascot.jpeg" alt="Team Mascot">
+          <div class="media-caption">Our Mascot</div>
+        </div>
       </div>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 Creative Cats FTC 27606. All rights reserved.</p>
-    <p><a href="index.html">Back to top</a> | <a href="goals.html#contact">Contact Us</a></p>
+    <p>&copy; 2025 Creative Cats FTC 27606</p>
+    <p><a href="index.html">Back to top</a> · <a href="goals.html#contact">Contact</a></p>
   </footer>
+
   <script src="reveal.js"></script>
 </body>
 </html>
